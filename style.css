@@ -1,0 +1,81 @@
+@import url(https://www.w3schools.com/w3css/4/w3.css);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Cinzel|Fauna+One);
+@import url(https://fonts.googleapis.com/css?family=Charm);
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Georgia", sans-serif;}
+body, html {
+  height: 100%;
+  color: #000;
+  line-height: 1.8;
+}
+
+/* image sizing */
+img {
+  position: center;
+  max-width: 100%;
+  border-radius: 30%;
+  padding: 10px;
+  margin: 0;
+  object-fit: cover;
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(72, 67, 73, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f2def7;
+  }
+
+div {
+    text-align: center;
+  }
+
+.imgdiv {
+    background-image: url('background_1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url(main.png);
+  min-height: 400px;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url(main.png);
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url(main.png);
+  min-height: 400px;
+}
+
+.w3-wide {font-family: Cinzel, serif; letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+.cursive {font-family: Charm, sans-serif; font-size: 40px;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
