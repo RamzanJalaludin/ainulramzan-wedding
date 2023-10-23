@@ -80,15 +80,72 @@ div {
   min-height: 400px;
 }
 
+#timer {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: lato, serif;
+  font-size: 1em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.days, .hours, .minutes, .seconds {
+  display: inline-block;
+  padding: 30px;
+  width: 150px;
+  border-radius: 5px;
+  background: blueviolet;
+}
+
+.numbers {
+  font-family: Cinzel, serif;
+  color: white;
+  font-size: 4em;
+  text-align: center;
+}
+
 .w3-wide {font-family: Cinzel, serif; letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 .cursive {font-family: Charm, sans-serif; font-size: 40px;}
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
+@media only screen and (max-device-width: 1200px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
     min-height: 400px;
+  }
+}
+
+@media only screen and (max-device-width: 650px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+
+  #timer {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: lato, serif;
+    font-size: .7em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .days, .hours, .minutes, .seconds {
+    display: inline-block;
+    padding: 10px;
+    width: 90px;
+    border-radius: 15px;
+    background: blueviolet;
+  }
+
+  .numbers {
+    font-family: Cinzel, serif;
+    color: white;
+    font-size: 3.5em;
+    text-align: center;
   }
 }
 
@@ -141,46 +198,3 @@ div {
   transform: scale3d(100%,100%,100%);
 }
 
-#timer {
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: lato, serif;
-  font-size: .7em;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.days, .hours, .minutes, .seconds {
-  display: inline-block;
-  padding: 20px;
-  width: 90px;
-  border-radius: 5px;
-}
-
-.days {
-  background: blueviolet;
-  max-width: 100px;
-}
-
-.hours {
-  background: blueviolet;
-  max-width: 100px;
-}
-
-.minutes {
-  background: blueviolet;
-  max-width: 100px;
-}
-
-.seconds {
-  background: blueviolet;
-  max-width: 100px;
-}
-
-.numbers {
-  font-family: Cinzel, serif;
-  color: white;
-  font-size: 4em;
-  text-align: center;
-}
