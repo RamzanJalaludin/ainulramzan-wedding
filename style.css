@@ -47,7 +47,7 @@ div {
   }
 
 .imgdiv {
-    background-image: url('background_1.png');
+    background-image: url('image/background_1.png');
     background-repeat: no-repeat;
     background-position: center;
     /* background-attachment: fixed; */
@@ -65,19 +65,19 @@ div {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url(main.png);
+  background-image: url(image/main.png);
   min-height: 400px;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-  background-image: url(main.png);
+  background-image: url(image/main.png);
   min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-  background-image: url(main.png);
+  background-image: url(image/main.png);
   min-height: 400px;
 }
 
@@ -91,4 +91,53 @@ div {
     background-attachment: scroll;
     min-height: 400px;
   }
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 3s;
+}
+
+.fill {
+  opacity: 0;
+  filter: blur(5px);
+  transform: scale(50%);
+  transition: all 3s;
+}
+
+.drop {
+  opacity: 1;
+  filter: blur(5px);
+  transform: translateY(-50%);
+  transition: all 3s;
+}
+
+.rise {
+  opacity: 1;
+  filter: blur(5px);
+  transform: translateY(50%);
+  transition: all 3s;
+}
+
+.slide {
+  opacity: 1;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 3s;
+}
+
+.swish {
+  opacity: 1;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 3s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(100%);
+  transform: translate3d(0,0,0);
+  transform: scale3d(100%,100%,100%);
 }

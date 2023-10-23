@@ -1,12 +1,6 @@
 
-// Modal Image Gallery
-function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
-  }
-  
+//javascript sections
+
   // Change style of navbar on scroll
   window.onscroll = function() {myFunction()};
   function myFunction() {
@@ -27,3 +21,26 @@ function onClick(element) {
           x.className = x.className.replace(" w3-show", "");
       }
   }
+
+  // Observe the elements position at center
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) =>{
+        console.log(entry)
+        if (entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+  const fillElements = document.querySelectorAll('.fill');
+  fillElements.forEach((el) => observer.observe(el));
+  const dropElements = document.querySelectorAll('.drop');
+  dropElements.forEach((el) => observer.observe(el));
+  const riseElements = document.querySelectorAll('.rise');
+  riseElements.forEach((el) => observer.observe(el));
+  const slideElements = document.querySelectorAll('.slide');
+  slideElements.forEach((el) => observer.observe(el));
+  const swishElements = document.querySelectorAll('.swish');
+  swishElements.forEach((el) => observer.observe(el));
