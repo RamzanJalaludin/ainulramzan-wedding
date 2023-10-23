@@ -50,7 +50,6 @@ div {
     background-image: url('image/background_1.png');
     background-repeat: no-repeat;
     background-position: center;
-    /* background-attachment: fixed; */
     background-size: cover;
 }
 
@@ -155,25 +154,28 @@ div {
 .days, .hours, .minutes, .seconds {
   display: inline-block;
   padding: 20px;
-  width: 100px;
+  width: 90px;
   border-radius: 5px;
-  text-align: center;
 }
 
 .days {
   background: blueviolet;
+  max-width: 100px;
 }
 
 .hours {
   background: blueviolet;
+  max-width: 100px;
 }
 
 .minutes {
   background: blueviolet;
+  max-width: 100px;
 }
 
 .seconds {
   background: blueviolet;
+  max-width: 100px;
 }
 
 .numbers {
