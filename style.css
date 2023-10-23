@@ -42,6 +42,7 @@ img {
     border-width: 5px;
 }
 
+
 div {
     text-align: center;
   }
@@ -107,7 +108,7 @@ div {
 
 .w3-wide {font-family: Cinzel, serif; letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
-.cursive {font-family: Charm, sans-serif; font-size: 40px;}
+.cursive {font-family: Charm, sans-serif; font-size: 30px;}
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1200px) {
