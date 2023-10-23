@@ -1,12 +1,39 @@
 
-// Modal Image Gallery
-function onClick(element) {
-    document.getElementById("img01").src = element.src;
-    document.getElementById("modal01").style.display = "block";
-    var captionText = document.getElementById("caption");
-    captionText.innerHTML = element.alt;
-  }
+//javascript sections
+
+  //timer countdown
+  var wedding = new Date("Dec 23, 2023 11:30:00").getTime();
   
+  // countdown
+  let timer = setInterval(function() {
+  
+    // get today's date
+    const today = new Date().getTime();
+  
+    // get the difference
+      diff = wedding - today;
+    
+  // math
+  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+
+  // display
+  document.getElementById("timer").innerHTML =
+    "<div class=\"days\"> \
+    <div class=\"numbers\">" + days + "</div>days</div> \
+    <div class=\"hours\"> \
+    <div class=\"numbers\">" + hours + "</div>hours</div> \
+    <div class=\"minutes\"> \
+    <div class=\"numbers\">" + minutes + "</div>minutes</div> \
+    <div class=\"seconds\"> \
+    <div class=\"numbers\">" + seconds + "</div>seconds</div> \
+    </div>";
+
+    }, 1000);
+
   // Change style of navbar on scroll
   window.onscroll = function() {myFunction()};
   function myFunction() {
@@ -17,6 +44,7 @@ function onClick(element) {
           navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
       }
   }
+
   
   // Used to toggle the menu on small screens when clicking on the menu button
   function toggleFunction() {
@@ -27,3 +55,26 @@ function onClick(element) {
           x.className = x.className.replace(" w3-show", "");
       }
   }
+
+  // Observe the elements position at center
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) =>{
+        console.log(entry)
+        if (entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+  const fillElements = document.querySelectorAll('.fill');
+  fillElements.forEach((el) => observer.observe(el));
+  const dropElements = document.querySelectorAll('.drop');
+  dropElements.forEach((el) => observer.observe(el));
+  const riseElements = document.querySelectorAll('.rise');
+  riseElements.forEach((el) => observer.observe(el));
+  const slideElements = document.querySelectorAll('.slide');
+  slideElements.forEach((el) => observer.observe(el));
+  const swishElements = document.querySelectorAll('.swish');
+  swishElements.forEach((el) => observer.observe(el));
