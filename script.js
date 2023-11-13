@@ -80,4 +80,6 @@
   swishElements.forEach((el) => observer.observe(el));
 
   //music autoplay
-  audioElement.play();
+  var audio = document.getElementById("music");
+  audio.autoplay = true;
+  audio.load();
