@@ -78,3 +78,6 @@
   slideElements.forEach((el) => observer.observe(el));
   const swishElements = document.querySelectorAll('.swish');
   swishElements.forEach((el) => observer.observe(el));
+
+  //music autoplay
+  audioElement.play();
